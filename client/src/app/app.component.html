@@ -1,0 +1,22 @@
+<h1>Hello</h1>
+
+<div *ngFor="let item of tutorialArr">
+  <p>{{ item | json }}</p>
+</div>
+
+<h1>Graphql Form</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <p>
+    <label>Title</label>
+    <input type="text" formControlName="title" id="title" />
+  </p>
+
+  <p>
+    <label>Description</label>
+    <input type="text" formControlName="description" />
+  </p>
+
+  <p>
+    <button type="submit" [disabled]="!form.valid">Submit</button>
+  </p>
+</form>
